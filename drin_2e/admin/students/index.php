@@ -70,7 +70,7 @@ $result =mysqli_query($conn, $sql);
 
             <a
                 class="btn btn-primary"
-                href="student_form.html"
+                href="create.php"
             >
                 + Add Student
             </a>
@@ -128,13 +128,15 @@ $result =mysqli_query($conn, $sql);
 
                                 <a
                                     class="btn btn-warning btn-sm"
-                                    href="student_form.html"
+                                    href="edit.php?id=<?php echo $row['id']; ?>"
                                 >
                                     Edit
                                 </a>
 
                                 <button
                                     class="btn btn-danger btn-sm"
+                                    href="edit.php?id=<?php echo $row['id']; ?>"
+                                    onclick="return confirm('Are you sure you want to delete this record?')"
                                 >
                                     Delete
                                 </button>
